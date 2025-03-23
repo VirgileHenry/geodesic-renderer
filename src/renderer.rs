@@ -50,6 +50,7 @@ pub struct Renderer {
     size: (u32, u32)
 }
 
+#[cfg(target_arch = "wasm32")]
 impl Renderer {
     pub async fn new(canvas: web_sys::HtmlCanvasElement) -> Result<Renderer, RendererCreateError> {
 
